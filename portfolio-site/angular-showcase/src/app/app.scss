@@ -1,0 +1,216 @@
+:host {
+  display: block;
+  width: min(1040px, 100%);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(148, 163, 253, 0.2);
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.18), rgba(15, 23, 42, 0.85));
+  padding: clamp(2rem, 5vw, 3.25rem);
+  box-shadow: 0 24px 80px -40px rgba(129, 140, 248, 0.65);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(148, 163, 253, 0.75);
+}
+
+.hero h1 {
+  margin: 1.25rem 0 1rem;
+  font-size: clamp(2.2rem, 4vw, 2.85rem);
+  line-height: 1.15;
+  color: #f8fafc;
+}
+
+.lead {
+  margin: 0 0 2rem;
+  color: rgba(226, 232, 240, 0.85);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.callouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.callouts span {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.28);
+  background: rgba(15, 23, 42, 0.75);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.achievements {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.achievements article {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 253, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.achievements .value {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.achievements .label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(148, 163, 253, 0.7);
+}
+
+.panels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panel-list button {
+  all: unset;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.25rem 1.4rem;
+  display: grid;
+  gap: 0.45rem;
+  transition: border 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel-list button .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(248, 250, 252, 0.95);
+}
+
+.panel-list button .description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(148, 163, 253, 0.8);
+}
+
+.panel-list button:hover,
+.panel-list button:focus-visible {
+  border-color: rgba(129, 140, 248, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -28px rgba(129, 140, 248, 0.75);
+}
+
+.panel-list button.active {
+  border-color: rgba(56, 189, 248, 0.8);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.8));
+}
+
+.panel-detail {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(30, 64, 175, 0.4);
+  background: rgba(15, 23, 42, 0.7);
+  padding: clamp(2rem, 5vw, 2.75rem);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel-detail header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.panel-detail header p {
+  margin: 0.75rem 0 0;
+  color: rgba(226, 232, 240, 0.85);
+  line-height: 1.6;
+}
+
+.panel-detail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.panel-detail li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: rgba(241, 245, 249, 0.9);
+}
+
+.panel-detail .bullet {
+  flex-shrink: 0;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(129, 140, 248, 0.8),
+    rgba(56, 189, 248, 0.8)
+  );
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+}
+
+.footer {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(2, 6, 23, 0.75));
+  padding: clamp(2rem, 5vw, 2.75rem);
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+  color: rgba(236, 253, 245, 0.92);
+  box-shadow: 0 20px 70px -45px rgba(16, 185, 129, 0.55);
+}
+
+.footer-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(209, 250, 229, 0.78);
+}
+
+@media (min-width: 960px) {
+  .panels {
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+
+  .panel-list {
+    width: 40%;
+  }
+
+  .panel-detail {
+    width: 60%;
+  }
+}

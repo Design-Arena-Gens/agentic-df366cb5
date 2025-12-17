@@ -1,0 +1,53 @@
+<main class="page">
+  <section class="hero">
+    <p class="eyebrow">Angular delivery</p>
+    <h1>Angular expertise for fast-moving product teams.</h1>
+    <p class="lead">
+      From orchestrating complex onboarding workflows to aligning design systems, I partner with React squads to keep Angular experiences modern, fast, and maintainable.
+    </p>
+    <div class="callouts">
+      <span *ngFor="let callout of callouts">{{ callout }}</span>
+    </div>
+  </section>
+
+  <section class="achievements">
+    <article *ngFor="let item of achievements">
+      <p class="value">{{ item.value }}</p>
+      <p class="label">{{ item.label }}</p>
+    </article>
+  </section>
+
+  <section class="panels">
+    <aside class="panel-list">
+      <button
+        *ngFor="let panel of panels"
+        type="button"
+        (click)="selectPanel(panel.id)"
+        [class.active]="panel.id === selectedPanelId()"
+      >
+        <span class="title">{{ panel.title }}</span>
+        <span class="description">{{ panel.summary }}</span>
+      </button>
+    </aside>
+
+    <article class="panel-detail" *ngIf="selectedPanel() as panel">
+      <header>
+        <h2>{{ panel.title }}</h2>
+        <p>{{ panel.summary }}</p>
+      </header>
+      <ul>
+        <li *ngFor="let checkpoint of panel.checkpoints">
+          <span class="bullet"></span>
+          <span>{{ checkpoint }}</span>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <p>Need Angular leadership to complement your React roadmap?</p>
+    <p class="footer-sub">
+      Let&apos;s co-own the experience—architecture, delivery, and craft included.
+    </p>
+  </footer>
+</main>
